@@ -227,6 +227,7 @@ services:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_HEC_TOKEN=ef16f05f-40e0-4108-a644-5323e02aaa44
       - SPLUNK_PASSWORD
+      - SPLUNK_APPS_URL=https://raw.githubusercontent.com/JohnnyMirza/confluent_splunk_demo/main/splunk-add-on-for-cisco-asa_410.tgz
     ports:
       - 8000:8000
       - 8090:8090
