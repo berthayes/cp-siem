@@ -12,8 +12,8 @@ DATA=$( cat << EOF
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "org.apache.kafka.connect.storage.StringConverter",
     "topics": "CISCO_ASA",
-    "splunk.hec.token": "3bca5f4c-1eff-4eee-9113-ea94c284478a",
-    "splunk.hec.uri": "https://splunk_search:8088",
+    "splunk.hec.token": "ef16f05f-40e0-4108-a644-5323e02aaa44",
+    "splunk.hec.uri": "https://splunk:8088",
     "splunk.hec.ssl.validate.certs": "false",
     "splunk.hec.json.event.formatted": "true"
   }
