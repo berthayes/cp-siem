@@ -27,6 +27,8 @@ DATA=$(
     "value.converter":"org.apache.kafka.connect.json.JsonConverter",
     "key.converter.schemas.enable":"false",
     "value.converter.schemas.enable":"false",
+    "errors.log.enable": false,
+    "errors.log.include.messages": false,
     "confluent.topic.bootstrap.servers":"broker:29092",
     "confluent.topic.replication.factor":"1"
   }
