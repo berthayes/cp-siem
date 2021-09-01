@@ -5,7 +5,7 @@
 PUBLIC_HOSTNAME=$(curl http://169.254.169.254/latest/meta-data/public-hostname)
 
 
-DOCKER_COMPOSE_FILE="/home/ubuntu/cp-siem/docker-compose.yml"
+DOCKER_COMPOSE_FILE="docker-compose.yml"
 
 
 # Run this if you want to (have to) run Confluent Control Center on port 80 and ksqldb server (REST API) on port 443 with no encryption
