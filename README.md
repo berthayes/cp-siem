@@ -8,9 +8,10 @@
 
 ### Configuring the demo environment
 
-- Running a really big pcap
-  - The include pcap is a decent example, but GitHub has a size limit on files in a repo.
-  - Run ```python3 scripts/get_pcap.py``` script to download a 1GB/1hr playback pcap featuring DNS exfiltration
+- Running a really big pcap [optional]
+  - The packet capture file included in this repository features DNS exfiltration (among other things), but will repeat itself after a few minutes.  This can be tiresome during a live demo or workshop.
+  - Run ```python3 scripts/get_pcap.py``` script to download a 1GB/1hr playback pcap.
+ 
 
 - Running NOT on ```localhost``` 
   - You need to advertise the correct public DNS hostname for the ksqlDB server to ensure that the ksqlDB editor in Confluent Control Center works without error. 
