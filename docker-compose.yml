@@ -265,7 +265,7 @@ services:
     command: 'splunk_eventgen -v generate /opt/splunk-eventgen/default/eventgen.conf'
 
   cyber-sigma-streams:
-    image: michaelpeacock/confluent-sigma:v1
+    image: michaelpeacock/confluent-sigma:v2
     container_name: cyber-sigma-streams
     depends_on:
       - broker
@@ -279,9 +279,9 @@ services:
       - bash
       - -c
       - |
-        echo "Starting Streams app..."
+        echo "Starting Streams app...java -cp sigma-streams-1.0-fat.jar io.confluent.sigmarules.SigmaStreamsApp -c /tmp/config/sigma-dns.properties"
         cd /tmp
-        java -cp kafka-sigma-streams-1.0-fat.jar io.confluent.sigmarules.SigmaStreamsApp -c /tmp/config/sigma-dns.properties
+        java -cp sigma-streams-1.0-fat.jar io.confluent.sigmarules.SigmaStreamsApp -c /tmp/config/sigma-dns.properties
         sleep infinity
 
   cyber-sigma-regex-ui:
