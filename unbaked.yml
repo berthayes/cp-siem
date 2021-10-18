@@ -92,7 +92,7 @@ services:
       - ./spooldir/:/var/spooldir/
       - ./scripts/:/tmp/scripts/
     command:
-      - /tmp/scripts/startKafkaConnectComponents.sh
+      - /tmp/scripts/startKafkaConnectWithoutConnectorsComponents.sh
 
   control-center:
     image: confluentinc/cp-enterprise-control-center:latest
