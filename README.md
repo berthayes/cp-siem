@@ -22,6 +22,8 @@
 - Cross your fingers
 - Run ```docker-compose up -d```
 
+If you are using sudo with docker-compose then you will likely need to use the -E option to sudo so it inherits your environmental variables so the last command will become ```sudo -E docker-compose up -d```
+
 ### Running the Demo
 - This demo is a combination of three different reposistories:
   - [JohnnyMirza/confluent_splunk_demo](https://github.com/JohnnyMirza/confluent_splunk_demo)
