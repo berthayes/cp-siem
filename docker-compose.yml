@@ -265,7 +265,7 @@ services:
     command: 'splunk_eventgen -v generate /opt/splunk-eventgen/default/eventgen.conf'
 
   cyber-sigma-streams:
-    image: michaelpeacock/confluent-sigma:v2
+    image: michaelpeacock/confluent-sigma:testv1
     container_name: cyber-sigma-streams
     depends_on:
       - broker
@@ -285,7 +285,7 @@ services:
         sleep infinity
 
   cyber-sigma-regex-ui:
-    image: michaelpeacock/confluent-sigma-regex-ui:latest
+    image: michaelpeacock/confluent-sigma-regex-ui:testv1
     container_name: cyber-sigma-regex-ui
     depends_on:
       - broker
