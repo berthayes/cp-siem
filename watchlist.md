@@ -59,7 +59,7 @@ AS SELECT * FROM KEYED_DNS
 INNER JOIN ADVERTS ADVERTS ON KEYED_DNS."query" = ADVERTS.DOMAIN
 EMIT CHANGES;
 ```
-This query creates a new stream `MATCHED_DOMAINS_DNS` that is backed by a new topic, `matched_dnsThis query doesn't really turn up much, which tells me that these hosts aren't beingThis kind of query won't help if the ad server is using HTTPS since the HOST header field would be encrypted.  matching on HTTP HOST field, match on DNS lookups for that hostname.
+This query creates a new stream `MATCHED_DOMAINS_DNS` that is backed by a new topic, `matched_dns` 
 
 You can look for all DNS lookups that match any host listed in the ad_hosts.csv file with the following query:
 ```
