@@ -1,7 +1,7 @@
-# Streaming ETL with ksqlDB
-## Filtering, transforming, and enriching data for a downstream SIEM
+# Aggregating Data with ksqlDB
+## Using Zeek Conn data to calculate bandwidth totals per host per hour
 
-### Using Zeek Conn data to calculate bandwidth totals per host
+### A SIEM is a very expensive calculator - perform calculations upstream and send the results to the reporting layer.
 
 - Create a Stream from the Zeek Conn topic
 ```sql
