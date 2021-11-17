@@ -34,5 +34,5 @@ If you are using sudo with docker-compose then you will likely need to use the -
   - [Analyzing Syslog data with ksqlDB](https://github.com/berthayes/cp-siem/blob/main/syslog.md)
   - [Calculating bandwidth totals per host per hour](https://github.com/berthayes/cp-siem/blob/main/ksqldb.md)
   - [Filter on invalid SSL transactions & enrich new data stream](https://github.com/berthayes/cp-siem/blob/main/ssl.md)
-  - [Matching hostnames in a watchlist against streaming DNS data](https://github.com/berthayes/cp-siem/blob/watchlist.md)
+  - [Matching hostnames in a watchlist against streaming DNS data](https://github.com/berthayes/cp-siem/blob/main/watchlist.md)
 - Watch this space for a new walk-through script that incorporates the best parts of all three.
