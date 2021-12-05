@@ -112,7 +112,7 @@ services:
       CONTROL_CENTER_BOOTSTRAP_SERVERS: 'broker:29092'
       CONTROL_CENTER_CONNECT_CONNECT-DEFAULT_CLUSTER: 'connect:8083'
       CONTROL_CENTER_KSQL_KSQLDB1_URL: "http://ksqldb-server:8088"
-      CONTROL_CENTER_KSQL_KSQLDB1_ADVERTISED_URL: "http://localhost:8088"
+      CONTROL_CENTER_KSQL_KSQLDB1_ADVERTISED_URL: "http://ec2-44-200-26-58.compute-1.amazonaws.com:8088"
       CONTROL_CENTER_SCHEMA_REGISTRY_URL: "http://schema-registry:8081"
       CONTROL_CENTER_REPLICATION_FACTOR: 1
       CONTROL_CENTER_INTERNAL_TOPICS_PARTITIONS: 1
@@ -228,7 +228,6 @@ services:
     hostname: splunk
     environment:
       - SPLUNK_START_ARGS=--accept-license
-      - SPLUNK_HEC_TOKEN=ef16f05f-40e0-4108-a644-5323e02aaa44
       - SPLUNK_PASSWORD
       - SPLUNK_APPS_URL=https://raw.githubusercontent.com/JohnnyMirza/confluent_splunk_demo/main/splunk-add-on-for-cisco-asa_410.tgz
     ports:
@@ -236,6 +235,7 @@ services:
       - 8090:8090
     volumes:
       - ./default.yml:/tmp/defaults/default.yml
+      - $PWD/splunk-search/:/opt/splunk/etc/apps/splunk-search/
 
   splunk_uf1:
       image: splunk/universalforwarder:latest
