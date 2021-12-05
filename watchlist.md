@@ -28,6 +28,11 @@ Once this is started, or if it had already been started, the `ad_hosts.csv` file
 ```
 ./cp-zeek/spooldir/ad_hosts/csv_finished/ad_servers.csv
 ```
+This means that if you are re-running the demonstration with a clean cluster you will need to ensure that you have moved it back to 
+```
+./cp-zeek/spooldir/ad_hosts/csv_input/ad_servers.csv
+```
+
 If you look under Topics, you should now see an topic called adhosts.
 
 Create a stream from this topic so that ksqlDB can process it:
