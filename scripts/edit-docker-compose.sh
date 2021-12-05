@@ -14,4 +14,4 @@ DOCKER_COMPOSE_FILE="${1:-$DEFAULT_COMPOSE}"
 
 
 # Run this if you are sane and can run these services on their default ports (9021 for Confluent Control Center and 8088 for ksqlDB)
-/bin/sed -i -e 's/      CONTROL_CENTER_KSQL_KSQLDB1_ADVERTISED_URL: \"http:\/\/localhost:8088\"/      CONTROL_CENTER_KSQL_KSQLDB1_ADVERTISED_URL: \"http:\/\/'$PUBLIC_HOSTNAME':8088\"/' $DOCKER_COMPOSE_FILE
+/bin/sed -i -e 's/      CONTROL_CENTER_KSQL_KSQLDB1_ADVERTISED_URL: .*$/      CONTROL_CENTER_KSQL_KSQLDB1_ADVERTISED_URL: \"http:\/\/'$PUBLIC_HOSTNAME':8088\"/' $DOCKER_COMPOSE_FILE
