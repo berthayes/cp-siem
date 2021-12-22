@@ -94,8 +94,7 @@ services:
       - ./spooldir/:/var/spooldir/
       - ./scripts/:/tmp/scripts/
     command:
-      - /tmp/scripts/startKafkaConnectWithoutConnectorsComponents.sh
-
+      - /tmp/scripts/startKafkaConnectDemo.sh
   control-center:
     image: confluentinc/cp-enterprise-control-center:latest
     hostname: control-center
@@ -267,7 +266,7 @@ services:
     command: 'splunk_eventgen -v generate /opt/splunk-eventgen/default/eventgen.conf'
 
   cyber-sigma-streams:
-    image: michaelpeacock/confluent-sigma:v2
+    image: michaelpeacock/confluent-sigma:v2_1
     container_name: cyber-sigma-streams
     depends_on:
       - broker
@@ -287,7 +286,7 @@ services:
         sleep infinity
 
   cyber-sigma-regex-ui:
-    image: michaelpeacock/confluent-sigma-regex-ui:latest
+    image: michaelpeacock/confluent-sigma-regex-ui:v2_1
     container_name: cyber-sigma-regex-ui
     depends_on:
       - broker
